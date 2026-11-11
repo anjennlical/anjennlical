@@ -62,7 +62,7 @@ A bilingual educational cybersecurity game designed to make security concepts ac
 
 - making cybersecurity more accessible
 - exploring offensive security through practical projects
-- building creative products with AI
+- building creative products with or without AI
 - learning through experimentation and hands-on development
 - bringing personality into technology
 
