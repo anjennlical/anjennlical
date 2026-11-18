@@ -17,9 +17,9 @@
 ## Limits and follow-up
 
 - LinkedIn blocks the automated request with HTTP 999. Its URL is preserved from the existing public GitHub profile; reachability was not confirmed by this check.
-- Firefox was not found in the checked installation locations. No Chrome, Edge or Chromium process was started. Browser animation, narrow-screen layout, actual light/dark browser display, screen readers and reduced-motion behavior were not exercised.
+- No Chrome, Edge or Chromium process was started. The existing in-app browser session was reused to inspect the actual remote branch README in dark mode. Project SVGs and both real game images rendered; the Projects anchor and the game workstation details expansion worked. Physical devices, screen readers, reduced motion and a full responsive matrix were not exercised.
 - The HTML preview uses GitHub-rendered Markdown and approximate responsive page styling. Image dimensions, single-column flow and essential text outside artwork were checked structurally; this is not a physical-device or browser-responsive certification.
-- GitHub's real branch/profile rendering, image-proxy behavior and SVG animations remain to be checked after an owner-approved push. A local HTML preview cannot establish those results.
+- Remote branch rendering was inspected in the existing browser session after the owner-approved push. The public profile is checked after the main branch update; complete animation-loop and accessibility acceptance remain separate follow-up checks.
 - No public implementation of Nocturne AI or ALT was found; neither is presented as an available product. No contribution data, metrics or progress percentages were fabricated. Contribution animation is deferred; the README links to the real GitHub activity instead.
 
 ## Local review outputs
