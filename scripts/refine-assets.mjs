@@ -5,6 +5,8 @@ import { createHash } from 'node:crypto';
 import { cat, star, blossom, wrap, save } from './build-assets.mjs';
 const root = fileURLToPath(new URL('../assets/profile/', import.meta.url));
 const projectAssets={};
+// Existing game icon; fan-project attribution is preserved in the README.
+const helloKittyIcon=readFileSync(`${root}/projects/hello-kitty-game-icon.png`).toString('base64');
 const languages = {
  pt: { bar:'PORTFÓLIO DE DESENVOLVIMENTO', hello:'oi, eu sou a lari!', role:'desenvolvedora em formação', tagline:'criando coisas fofas com código sério.', sub:'Software, IA e experiências interativas.', message:'curiosidade.exe em execução', companion:'COMPANHEIRA', areas:'DESENVOLVIMENTO DE SOFTWARE · IA · CIBERSEGURANÇA', footer:'um pouco de rosa no código-fonte.', signature:'Feito com curiosidade, código e um pouco de rosa. ♡', description:'Terminal Sakura OS com estrelas suaves e a gatinha pixelada original Sakura Byte.' },
  en: { bar:'DEVELOPER PORTFOLIO', hello:"hello, i'm lari!", role:'creative developer in progress', tagline:'building cute things with serious code.', sub:'Software, AI &amp; interactive experiences.', message:'curiosity.exe is always running', companion:'COMPANION', areas:'SOFTWARE DEVELOPMENT · AI · CYBERSECURITY', footer:'keep a little pink in the source code.', signature:'Made with curiosity, code &amp; a little bit of pink. ♡', description:'Sakura OS terminal with gentle stars and original pixel cat Sakura Byte.' }
@@ -32,15 +34,16 @@ for (const [lang,t] of Object.entries(languages)) {
  save(`footer-${lang}`,960,124,t.footer,t.description,`<rect x="1" y="1" width="958" height="122" rx="18" fill="url(#night)" stroke="#875169"/><path d="M28 105Q300 75 540 107T930 98" fill="none" stroke="#66436C"/>${star(674,46,.6)}${star(600,25,.5)}${star(874,28,.5)}${blossom(923,83,.4)}<text x="40" y="52" font-size="25" fill="#FFB5DA" font-weight="600">${t.footer}</text><text x="40" y="82" font-size="14" fill="#C2B6CF">${t.signature}</text><g transform="translate(746 5) scale(.75)">${cat}</g>`);
  const projects = lang === 'pt' ? [
  ['nekostrike','01','NekoStrike','evidências primeiro. IA com contexto.','SEGURANÇA / MVP LOCAL','#FF5CA8','&gt;_'],
- ['cyber-kitty','02','Cyber Kitty Adventures','explorar, aprender e cuidar do mundo digital.','JOGO EDUCATIVO / CAPÍTULO 1','#FFB5DA','{ }'],
+ ['cyber-kitty','02','Cyber Kitty Adventures','explorar, aprender e cuidar do mundo digital.','JOGO EDUCATIVO / CAPÍTULO 1','#FFB5DA',''],
  ['nocturne','03','Nocturne AI','investigação digital e inteligência artificial.','IA / EM DESENVOLVIMENTO','#7DE0E8','◇']
  ] : [
  ['nekostrike','01','NekoStrike','evidence first. AI with context.','SECURITY / LOCAL MVP','#FF5CA8','&gt;_'],
- ['cyber-kitty','02','Cyber Kitty Adventures','explore, learn &amp; care for the digital world.','EDUCATIONAL GAME / CHAPTER 1','#FFB5DA','{ }'],
+ ['cyber-kitty','02','Cyber Kitty Adventures','explore, learn &amp; care for the digital world.','EDUCATIONAL GAME / CHAPTER 1','#FFB5DA',''],
  ['nocturne','03','Nocturne AI','digital investigation meets artificial intelligence.','AI / IN DEVELOPMENT','#7DE0E8','◇']
  ];
  for (const [name,index,title,subtitle,tags,color,icon] of projects) {
- const card=`<rect x="1" y="1" width="958" height="122" rx="16" fill="#251824" stroke="#875169"/><path class="project-accent" d="M22 22v80" stroke="${color}" stroke-width="3"/><text x="44" y="29" fill="${color}" font-family="monospace" font-size="12" letter-spacing="1.8">${index} / ${tags}</text><text x="43" y="72" font-size="32" fill="#FFD1E7" font-weight="700">${title}</text><text x="45" y="101" font-size="17" fill="#C2B6CF">${subtitle}</text><rect x="824" y="22" width="94" height="78" rx="14" fill="#110E19" stroke="#66436C"/><text x="871" y="72" text-anchor="middle" fill="${color}" font-family="monospace" font-size="32">${icon}</text><circle class="project-signal" cx="906" cy="33" r="3" fill="${color}" opacity=".7"/>`;
+ const projectIcon=name==='cyber-kitty'?`<image x="847" y="37" width="48" height="48" href="data:image/png;base64,${helloKittyIcon}"/>`:`<text x="871" y="72" text-anchor="middle" fill="${color}" font-family="monospace" font-size="32">${icon}</text>`;
+ const card=`<rect x="1" y="1" width="958" height="122" rx="16" fill="#251824" stroke="#875169"/><path class="project-accent" d="M22 22v80" stroke="${color}" stroke-width="3"/><text x="44" y="29" fill="${color}" font-family="monospace" font-size="12" letter-spacing="1.8">${index} / ${tags}</text><text x="43" y="72" font-size="32" fill="#FFD1E7" font-weight="700">${title}</text><text x="45" y="101" font-size="17" fill="#C2B6CF">${subtitle}</text><rect x="824" y="22" width="94" height="78" rx="14" fill="#110E19" stroke="#66436C"/>${projectIcon}<circle class="project-signal" cx="906" cy="33" r="3" fill="${color}" opacity=".7"/>`;
  const motion=`<style>.project-accent{animation:sakura-line 10s ease-in-out infinite}.project-signal{animation:sakura-bloom 8s ease-in-out -${Number(index)}s infinite}@keyframes sakura-line{0%,70%,100%{stroke-opacity:.65}30%,45%{stroke-opacity:1}}@keyframes sakura-bloom{0%,100%{opacity:.35}40%{opacity:1}}@media(prefers-reduced-motion:reduce){.project-accent,.project-signal{animation:none}}</style>`;
  const animated=wrap(960,124,title,subtitle,motion+card,false);
  const version=`${name}-${lang}-${createHash('sha256').update(animated).digest('hex').slice(0,8)}`;

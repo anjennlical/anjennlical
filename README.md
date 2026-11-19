@@ -61,7 +61,7 @@ O laboratório e os relatórios funcionam sem chave de API. Testes automatizados
 
 ### 02 / Cyber Kitty Adventures
 
-[![Cyber Kitty Adventures — explorar, aprender e cuidar do mundo digital. Jogo educativo, Capítulo 1.](assets/profile/projects/cyber-kitty-pt-b1163d16.svg)](https://github.com/anjennlical/cyber-kitty-technical-showcase)
+[![Cyber Kitty Adventures — explorar, aprender e cuidar do mundo digital. Jogo educativo, Capítulo 1.](assets/profile/projects/cyber-kitty-pt-565622d9.svg)](https://github.com/anjennlical/cyber-kitty-technical-showcase)
 
 Jogo educativo em Phaser e TypeScript que apresenta segurança digital por meio de exploração, narrativa e decisões práticas em Byteberry Town. As atividades abordam arquivos, verificação de origem e compartilhamento seguro.
 
