@@ -20,7 +20,7 @@ Os assets originais da primeira versão continuam preservados. Sakura Byte é um
 
 1. Edite ambos os READMEs ao mudar informações de um projeto. Preserve o mesmo escopo, stack, estado e links em cada idioma.
 2. Edite `scripts/refine-assets.mjs` para alterar os elementos localizados. Ele reutiliza as formas e animações de `scripts/build-assets.mjs`, sem bibliotecas externas ou rede.
-3. Execute `node scripts/pink-links.mjs` e `node scripts/validate.mjs`. O primeiro comando também executa os geradores anteriores e atualiza os blocos de navegação marcados nos dois READMEs.
+3. Execute `node scripts/build-static-readmes.mjs` e `node scripts/validate.mjs`. O primeiro comando executa todos os geradores e deriva as alternativas completas sem animação. Edite os dois READMEs principais; não edite os arquivos `.static.md` gerados manualmente.
 4. Confira os SVGs como XML e as prévias em desktop e mobile. Se alterar ícones, preserve suas fontes e licenças.
 5. Confira o diff antes de qualquer publicação. Uma revisão local não é aprovação para push.
 
@@ -30,7 +30,9 @@ As animações usam CSS interno ao SVG: estrelas, cauda, cursor e revelação do
 
 ## Navegação rosa
 
-Os links de navegação, idioma, ações de projetos e contato usam imagens SVG locais dentro de links HTML normais, com rótulos alternativos. As imagens são estáticas, com altura de 44 px, contraste alto e quebra natural de linha. O preenchimento rosa claro destaca ações principais; ações secundárias usam fundo escuro e borda rosa. Hero, cards e contornos receberam mais rosa sem alterar as capturas dos projetos ou os logotipos.
+Os links de navegação, idioma, ações de projetos e contato usam imagens SVG locais dentro de links HTML normais, com rótulos alternativos. Os botões têm altura de 44 px, contraste alto e quebra natural de linha. O preenchimento rosa claro destaca ações principais; ações secundárias usam fundo escuro e borda rosa. Hero, cards e contornos receberam mais rosa sem alterar as capturas dos projetos ou os logotipos.
+
+Botões e cabeçalhos dos projetos agora incluem animações finitas de até 3,9 segundos após carregar: seta com deslocamento de 2 px, brilho discreto na borda, revelação da linha lateral e ponto decorativo suave. Textos, logotipos e áreas clicáveis permanecem fixos. As regras respeitam `prefers-reduced-motion`. O botão “Sem movimento” abre uma versão completa do perfil com todos os assets estáticos, e a troca de idioma mantém essa opção. Veja [decisões e verificação de movimento](MOTION_DESIGN.md).
 
 A cor dos links de texto nativos continua sob controle do tema do GitHub. Não há CSS tentando alterar o estilo da plataforma: [o pipeline oficial remove estilos inline](https://github.com/github/markup#github-markup). Referências técnicas permanecem links de texto para evitar excesso de botões. Endereço de e-mail e identificador continuam copiáveis fora das imagens.
 

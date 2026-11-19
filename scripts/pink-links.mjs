@@ -8,8 +8,11 @@ mkdirSync(`${root}assets/profile/links`,{recursive:true});
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
 function button(name,label,width,primary=false){
  const bg=primary?'#FFB5DA':'#2B1728',fg=primary?'#291229':'#FFD1E7',stroke=primary?'#FFB5DA':'#BE7199';
- const body=`<rect x="1" y="3" width="${width-2}" height="38" rx="10" fill="${bg}" stroke="${stroke}"/><text x="${width/2-8}" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="${fg}">${escape(label)}</text><path d="m${width-24} 18 5 5-5 5m-6-5h11" fill="none" stroke="${fg}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`;
- writeFileSync(`${root}assets/profile/links/${name}.svg`,wrap(width,44,label,`${label} — navigation link`,body,false));
+ const delay=Array.from(name).reduce((n,c)=>n+c.charCodeAt(0),0)%4/10;
+ const motion=`<style>.button-arrow{animation:sakura-nudge 3.6s ease-in-out ${delay}s both}.button-trace{animation:sakura-trace 3.6s ease-in-out ${delay}s both}@keyframes sakura-nudge{0%,28%,60%,100%{transform:translateX(0)}14%,44%{transform:translateX(2px)}}@keyframes sakura-trace{0%,100%{opacity:0}35%,65%{opacity:.65}}@media(prefers-reduced-motion:reduce){.button-arrow,.button-trace{animation:none}}</style>`;
+ const body=`<rect x="1" y="3" width="${width-2}" height="38" rx="10" fill="${bg}" stroke="${stroke}"/><path class="button-trace" opacity="0" d="M18 4H${width-18}" fill="none" stroke="${primary?'#9D3269':'#FFB5DA'}" stroke-width="2" stroke-linecap="round"/><text x="${width/2-8}" y="28" text-anchor="middle" font-size="14" font-weight="600" fill="${fg}">${escape(label)}</text><path class="button-arrow" d="m${width-24} 18 5 5-5 5m-6-5h11" fill="none" stroke="${fg}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`;
+ writeFileSync(`${root}assets/profile/links/${name}.svg`,wrap(width,44,label,`${label} — navigation link`,motion+body,false));
+ writeFileSync(`${root}assets/profile/links/${name}-static.svg`,wrap(width,44,label,`${label} — static navigation link`,body,false));
  return (href,alt=label)=>`<a href="${escape(href)}"><img src="assets/profile/links/${name}.svg" width="${width}" height="44" alt="${escape(alt)}" /></a>`;
 }
 function replaceBlock(text,key,initial,html){
@@ -24,6 +27,10 @@ for(const lang of ['pt','en']){
  let text=readFileSync(`${root}${file}`,'utf8');
  const languages=`<p align="right">${button(`language-pt-${lang}`,'PT · Português',164,pt)('README.md','Ler em português brasileiro')} ${button(`language-en-${lang}`,'EN · English',144,!pt)('README.en.md','Read in English')}</p>`;
  text=replaceBlock(text,'languages','<p align="right"><a href="README.md">🇧🇷 Português</a> | <a href="README.en.md">🌐 English</a></p>',languages);
+ const motionLink=button(`motion-${lang}`,pt?'Sem movimento':'Reduce motion',184)(pt?'README.static.md':'README.en.static.md');
+ const motionBlock=`<!-- sakura:motion -->\n<p align="right">${motionLink}</p>\n<!-- /sakura:motion -->`;
+ if(/<!-- sakura:motion -->/.test(text))text=text.replace(/<!-- sakura:motion -->[\s\S]*?<!-- \/sakura:motion -->/,motionBlock);
+ else text=text.replace('<!-- /sakura:languages -->',`<!-- /sakura:languages -->\n\n${motionBlock}`);
  const nav=pt?[['Projetos','projetos-em-destaque',114],['Tecnologias','tecnologias-e-ferramentas',140],['Em andamento','em-desenvolvimento',160],['Atividade','atividade-pública',124],['Contato','vamos-conversar',114]]:[['Projects','featured-projects',118],['Technologies','technologies-and-tools',150],['In progress','in-development',140],['Activity','public-activity',112],['Contact','lets-connect',116]];
  const oldNav=pt?'[Projetos](#projetos-em-destaque) · [Tecnologias](#tecnologias-e-ferramentas) · [Em desenvolvimento](#em-desenvolvimento) · [Atividade](#atividade-pública) · [Contato](#vamos-conversar)':'[Projects](#featured-projects) · [Technologies](#technologies-and-tools) · [In development](#in-development) · [Activity](#public-activity) · [Contact](#lets-connect)';
  text=replaceBlock(text,'navigation',oldNav,`<p>\n${nav.map(([label,anchor,w],i)=>button(`nav-${i}-${lang}`,label,w,i===0)(`#${anchor}`)).join('\n')}\n</p>`);
@@ -42,4 +49,4 @@ for(const lang of ['pt','en']){
  text=replaceBlock(text,'contact-actions',oldContact,`<p>${linkedin('https://www.linkedin.com/in/larissa-albuquerque-65b437241/')} ${email('mailto:kerlalarissa@gmail.com')} ${github('https://github.com/anjennlical')}</p>\n\n\`kerlalarissa@gmail.com\` · \`@anjennlical\``);
  writeFileSync(`${root}${file}`,text);
 }
-console.log('Generated pink navigation/actions for both languages. Native reference links keep GitHub theme colors.');
+console.log('Generated animated pink actions and static counterparts for both languages.');

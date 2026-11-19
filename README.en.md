@@ -2,6 +2,10 @@
 <p align="right"><a href="README.md"><img src="assets/profile/links/language-pt-en.svg" width="164" height="44" alt="Ler em português brasileiro" /></a> <a href="README.en.md"><img src="assets/profile/links/language-en-en.svg" width="144" height="44" alt="Read in English" /></a></p>
 <!-- /sakura:languages -->
 
+<!-- sakura:motion -->
+<p align="right"><a href="README.en.static.md"><img src="assets/profile/links/motion-en.svg" width="184" height="44" alt="Reduce motion" /></a></p>
+<!-- /sakura:motion -->
+
 <p align="center"><picture><source media="(max-width: 600px)" srcset="assets/profile/hero-en-mobile.svg" /><img src="assets/profile/hero-en.svg" width="960" alt="Sakura OS — hello, I'm lari! A midnight terminal in pink and lavender with original pixel cat Sakura Byte." /></picture></p>
 
 # Larissa Albuquerque
