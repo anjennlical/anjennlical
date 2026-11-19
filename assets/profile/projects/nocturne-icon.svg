@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="nocturne-title nocturne-desc">
+  <title id="nocturne-title">Nocturne AI — investigação digital</title>
+  <desc id="nocturne-desc">Ícone original: lua lavanda, lupa rosa e três pontos conectados em uma pequena constelação.</desc>
+  <path d="M31 7C15 7 6 21 10 35c4 14 20 19 32 9-13 3-23-8-22-20 1-8 5-14 11-17Z" fill="#B89CFF"/>
+  <circle cx="39" cy="35" r="13" fill="#211627" stroke="#FFB5DA" stroke-width="2.8"/>
+  <path d="m48.5 44.5 10 10" stroke="#FF5CA8" stroke-width="4.2" stroke-linecap="round"/>
+  <path d="m32 38 7-8 7 7" fill="none" stroke="#B89CFF" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="32" cy="38" r="2.6" fill="#FFB5DA"/>
+  <circle cx="39" cy="30" r="2.6" fill="#7DE0E8"/>
+  <circle cx="46" cy="37" r="2.6" fill="#FF5CA8"/>
+  <path d="m48 7 1.3 4.7L54 13l-4.7 1.3L48 19l-1.3-4.7L42 13l4.7-1.3Z" fill="#FFB5DA"/>
+</svg>

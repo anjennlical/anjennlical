@@ -92,7 +92,7 @@ An educational game built with Phaser and TypeScript, introducing digital safety
 
 ### 03 / Nocturne AI
 
-![Nocturne AI — digital investigation meets artificial intelligence. Project in development.](assets/profile/projects/nocturne-en-d1d59851-static.svg)
+![Nocturne AI — digital investigation meets artificial intelligence. Project in development.](assets/profile/projects/nocturne-en-4cbc7f14-static.svg)
 
 A project in development exploring digital investigation with AI. The proposal examines evidence analysis workflows and investigative hypotheses, with multi-agent architectures planned as part of the approach.
 

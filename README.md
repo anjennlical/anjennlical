@@ -92,7 +92,7 @@ Jogo educativo em Phaser e TypeScript que apresenta segurança digital por meio 
 
 ### 03 / Nocturne AI
 
-![Nocturne AI — investigação digital e inteligência artificial. Projeto em desenvolvimento.](assets/profile/projects/nocturne-pt-eb82a9f2.svg)
+![Nocturne AI — investigação digital e inteligência artificial. Projeto em desenvolvimento.](assets/profile/projects/nocturne-pt-f3c1770b.svg)
 
 Projeto em desenvolvimento para explorar investigação digital com IA. A proposta pesquisa fluxos de análise de evidências e hipóteses investigativas, com arquiteturas multiagentes planejadas.
 
