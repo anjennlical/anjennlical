@@ -23,17 +23,17 @@ for(const {name,text} of texts){
  const staticView=name.includes('.static.');
  assert(text.includes(`href="${staticView?'README.static.md':'README.md'}"`)&&text.includes(`href="${staticView?'README.en.static.md':'README.en.md'}"`),`${name}: missing language switch`);
  const intro=text.split('**\n\n')[1].split(/\n\n(?:\[|<!-- sakura:navigation -->)/)[0];
- const introWords=words(intro); assert(introWords>=60&&introWords<=100,`${name}: introduction is ${introWords} words`);
+ const introWords=words(intro); assert(introWords>=40&&introWords<=75,`${name}: introduction is ${introWords} words`);
  const descriptions=[...text.matchAll(/^### 0\d \/ (.+)\n\n.*\n\n([^\n]+)/gm)].map(m=>({project:m[1],words:words(m[2])}));
  assert.equal(descriptions.length,3,`${name}: missing project`);
- for(const p of descriptions) assert(p.words>=40&&p.words<=65,`${name}: ${p.project} description is ${p.words} words`);
+ for(const p of descriptions) assert(p.words>=20&&p.words<=45,`${name}: ${p.project} description is ${p.words} words`);
  const imagePaths=[...text.matchAll(/(?:(?:src|srcset)="|\]\()(assets\/[^"\)]+)/g)].map(m=>m[1]);
  const imageBytes=[...new Set(imagePaths)].reduce((n,p)=>n+statSync(resolve(root,p)).size,0);
  if(staticView) for(const p of imagePaths.filter(p=>p.endsWith('.svg'))) assert(!/@keyframes|<animate\b|<animateTransform\b/.test(readFileSync(resolve(root,p),'utf8')),`${name}: animated image ${p}`);
  assert(imageBytes<600_000,`${name}: displayed images exceed 600 KB`);
  result.push({file:name,localTargets:targets.filter(t=>!/^https:|^mailto:/.test(t)).length,introWords,descriptions,displayedImageBytes:imageBytes});
 }
-const normalize=t=>t.replace(/-(pt|en)(?=-|\.)/g,'-locale');
+const normalize=t=>t.replace(/-(pt|en)(?=-|\.)/g,'-locale').replace(/-[a-f0-9]{8}(?=-static\.svg$|\.svg$)/g,'');
 const images=t=>[...t.matchAll(/(?:(?:src|srcset)="|\]\()(assets\/[^"\)]+)/g)].map(m=>normalize(m[1])).sort();
 assert.deepEqual(images(texts[0].text),images(texts[1].text),'Image parity differs between languages');
 assert.deepEqual(images(texts[2].text),images(texts[3].text),'Static image parity differs between languages');

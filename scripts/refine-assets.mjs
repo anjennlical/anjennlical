@@ -1,8 +1,10 @@
 // Adds localized v2 assets; preserves the published v1 artwork.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 import { cat, star, blossom, wrap, save } from './build-assets.mjs';
 const root = fileURLToPath(new URL('../assets/profile/', import.meta.url));
+const projectAssets={};
 const languages = {
  pt: { bar:'PORTFÓLIO DE DESENVOLVIMENTO', hello:'oi, eu sou a lari!', role:'desenvolvedora em formação', tagline:'criando coisas fofas com código sério.', sub:'Software, IA e experiências interativas.', message:'curiosidade.exe em execução', companion:'COMPANHEIRA', areas:'DESENVOLVIMENTO DE SOFTWARE · IA · CIBERSEGURANÇA', footer:'um pouco de rosa no código-fonte.', signature:'Feito com curiosidade, código e um pouco de rosa. ♡', description:'Terminal Sakura OS com estrelas suaves e a gatinha pixelada original Sakura Byte.' },
  en: { bar:'DEVELOPER PORTFOLIO', hello:"hello, i'm lari!", role:'creative developer in progress', tagline:'building cute things with serious code.', sub:'Software, AI &amp; interactive experiences.', message:'curiosity.exe is always running', companion:'COMPANION', areas:'SOFTWARE DEVELOPMENT · AI · CYBERSECURITY', footer:'keep a little pink in the source code.', signature:'Made with curiosity, code &amp; a little bit of pink. ♡', description:'Sakura OS terminal with gentle stars and original pixel cat Sakura Byte.' }
@@ -39,12 +41,18 @@ for (const [lang,t] of Object.entries(languages)) {
  ];
  for (const [name,index,title,subtitle,tags,color,icon] of projects) {
  const card=`<rect x="1" y="1" width="958" height="122" rx="16" fill="#251824" stroke="#875169"/><path class="project-accent" d="M22 22v80" stroke="${color}" stroke-width="3"/><text x="44" y="29" fill="${color}" font-family="monospace" font-size="12" letter-spacing="1.8">${index} / ${tags}</text><text x="43" y="72" font-size="32" fill="#FFD1E7" font-weight="700">${title}</text><text x="45" y="101" font-size="17" fill="#C2B6CF">${subtitle}</text><rect x="824" y="22" width="94" height="78" rx="14" fill="#110E19" stroke="#66436C"/><text x="871" y="72" text-anchor="middle" fill="${color}" font-family="monospace" font-size="32">${icon}</text><circle class="project-signal" cx="906" cy="33" r="3" fill="${color}" opacity=".7"/>`;
- const motion=`<style>.project-accent{stroke-dasharray:80;animation:sakura-reveal 2.2s ease-out both}.project-signal{animation:sakura-bloom 3.6s ease-in-out both}@keyframes sakura-reveal{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}@keyframes sakura-bloom{0%{opacity:.3}50%{opacity:1}100%{opacity:.7}}@media(prefers-reduced-motion:reduce){.project-accent,.project-signal{animation:none}}</style>`;
- writeFileSync(`${root}/projects/${name}-${lang}.svg`,wrap(960,124,title,subtitle,motion+card,false));
+ const motion=`<style>.project-accent{animation:sakura-line 10s ease-in-out infinite}.project-signal{animation:sakura-bloom 8s ease-in-out -${Number(index)}s infinite}@keyframes sakura-line{0%,70%,100%{stroke-opacity:.65}30%,45%{stroke-opacity:1}}@keyframes sakura-bloom{0%,100%{opacity:.35}40%{opacity:1}}@media(prefers-reduced-motion:reduce){.project-accent,.project-signal{animation:none}}</style>`;
+ const animated=wrap(960,124,title,subtitle,motion+card,false);
+ const version=`${name}-${lang}-${createHash('sha256').update(animated).digest('hex').slice(0,8)}`;
+ projectAssets[`${name}-${lang}`]=`assets/profile/projects/${version}.svg`;
+ writeFileSync(`${root}/projects/${name}-${lang}.svg`,animated);
+ writeFileSync(`${root}/projects/${version}.svg`,animated);
+ writeFileSync(`${root}/projects/${version}-static.svg`,wrap(960,124,title,subtitle,card,false));
  writeFileSync(`${root}/projects/${name}-${lang}-static.svg`,wrap(960,124,title,subtitle,card,false));
 }
 }
 mkdirSync(`${root}/toolkit`,{recursive:true});
+writeFileSync(`${root}/projects/manifest.json`,JSON.stringify(projectAssets,null,2)+'\n');
 const labels={python:'Python',typescript:'TypeScript',javascript:'JavaScript',java:'Java',react:'React',html5:'HTML5',css3:'CSS3',fastapi:'FastAPI',vitejs:'Vite',sqlite:'SQLite',git:'Git',github:'GitHub',powershell:'PowerShell',linux:'Linux',claude:'Claude',vscode:'VS Code',amazonwebservices:'AWS',openai:'OpenAI',codex:'Codex','gemini-color':'Gemini',wireshark:'Wireshark',n8n:'n8n',make:'Make'};
 for (const [name,label] of Object.entries(labels)) {
  const source=readFileSync(`${root}/icons/${name}.svg`,'utf8');

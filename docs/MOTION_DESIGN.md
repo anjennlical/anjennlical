@@ -1,29 +1,29 @@
-# Sakura OS — movimento com leitura estável
+# Sakura OS — movimento, hierarquia e leitura
 
-## Direção
+## Comportamento
 
-O pedido acrescenta movimento aos botões rosa e a outros detalhes do perfil preservando a hierarquia e a experiência já aprovadas. Foram animados apenas a seta e um detalhe de borda dos botões, além da linha lateral e de um ponto decorativo nos três cabeçalhos de projetos. Texto, logotipos, capturas, largura, altura e área clicável não se movem.
+As ações do perfil usam um movimento de seta de 3 px e um brilho discreto na borda. O ciclo de oito segundos contém pausas longas. Assim, o efeito continua disponível quando a pessoa chega a uma seção mais abaixo na página; a implementação anterior fazia uma única execução após carregar.
 
-Os novos efeitos são finitos: botões usam 3,6 segundos com atraso entre 0 e 0,3 segundo; cabeçalhos usam 2,2 e 3,6 segundos. Depois ficam estáticos. Não há rolagem automática, flashes, variação de tamanho, novos GIFs ou JavaScript. Os efeitos antigos do hero e do mascote são preservados na versão animada.
+Os cabeçalhos dos projetos variam lentamente a luz da linha lateral e de um ponto decorativo, em ciclos de oito a dez segundos. Texto, logotipos, capturas e dimensões permanecem estáveis. Os controles de idioma e de movimento são estáticos. Não há animação de todos os ícones nem deslocamento da página.
 
-## Controle de movimento
+Os SVGs de ações e cabeçalhos possuem nomes com hash do conteúdo. Uma alteração de estilo produz uma URL nova, evitando a reutilização de uma imagem antiga em cache. Os arquivos anteriores continuam disponíveis; não é necessário limpar dados pessoais do navegador.
 
-- `prefers-reduced-motion: reduce` desativa as novas regras de animação.
-- O botão **Sem movimento / Reduce motion**, no início de cada perfil, abre `README.static.md` ou `README.en.static.md`.
-- Essas versões substituem todos os SVGs animados por alternativas sem keyframes; hero, rodapé, botões e cabeçalhos são estáticos.
-- A troca de idioma mantém a leitura sem movimento. Há um link para retornar à versão animada.
-- Conteúdo, destinos, projetos, capturas e textos essenciais são os mesmos.
+## Controles e acessibilidade
 
-## Implementação e checks
+- `prefers-reduced-motion: reduce` desativa as regras animadas.
+- **Sem movimento / Reduce motion** abre o perfil completo com hero, rodapé, botões e cabeçalhos estáticos.
+- A troca de idioma mantém essa escolha; é possível retornar à versão animada.
+- A superfície visível dos botões foi reduzida de 38 para 32 px; a imagem conserva 44 px de altura para a área de clique. Larguras acompanham rótulos mais curtos, sem reduzir a escala da fonte por CSS.
+- As cores e o contraste da identidade rosa foram preservados. Conteúdo e contatos essenciais também estão em texto copiável.
 
-Execute `node scripts/build-static-readmes.mjs` para gerar tudo, seguido de `node scripts/validate.mjs`.
+## Vitrine mais direta
 
-- Quatro READMEs renderizados pela API Markdown oficial do GitHub.
-- Checks locais de arquivos, âncoras, paridade entre idiomas, metadados e credenciais passaram nos quatro documentos.
-- Os SVGs referenciados pelos perfis estáticos foram inspecionados automaticamente e não contêm keyframes nem elementos SMIL de animação.
-- 138 SVGs passaram pela análise XML. Imagens referenciadas pela versão animada somam aproximadamente 464 KB por idioma; a estática, 454 KB.
-- O navegador confirmou no SVG do botão `sakura-nudge`, duração de 3,6 s e uma iteração. Após o término, a seta voltou à posição original e o brilho ficou invisível.
-- Fluxo Sem movimento → English e navegação para Projects conferidos na prévia. Nenhuma imagem quebrada e nenhum estouro horizontal em 390 × 844 px. O viewport temporário foi restaurado.
-- As cores dos botões não mudaram: o contraste medido na revisão rosa permanece preservado.
+A apresentação tem 58 palavras em português e 59 em inglês. As descrições dos projetos ficam entre 24 e 31 palavras. Recursos, stack e estado continuam visíveis; capturas e demonstrações reais são preservadas. Informações de evolução ficam em um bloco expansível, sem repetir toda a vitrine.
 
-A prévia local usa HTML do GitHub e estilos aproximados. O suporte do sistema a movimento reduzido dentro do proxy de imagens não foi certificado em todos os navegadores; por isso existe também uma escolha explícita, completa e funcional sem movimento. Não foram feitos testes em aparelhos físicos ou medidas de FPS.
+## Manutenção e verificação
+
+Execute `node scripts/build-static-readmes.mjs` e `node scripts/validate.mjs`.
+
+Os checks cobrem os quatro documentos, âncoras, arquivos, paridade dos idiomas e ausência de animação nas alternativas estáticas. O navegador confirmou `sakura-nudge`, duração de oito segundos, iteração `infinite` e deslocamento calculado próximo de 3 px durante a execução.
+
+As prévias usam HTML renderizado pela API do GitHub e estilos locais aproximados. O suporte à preferência do sistema dentro do proxy de imagens não foi certificado em todos os navegadores; a opção explícita sem movimento fornece uma alternativa independente. Testes em aparelhos físicos e medidas de FPS não foram realizados.

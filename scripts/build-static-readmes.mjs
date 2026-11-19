@@ -9,7 +9,7 @@ for(const [source,destination,lang] of [['README.md','README.static.md','pt'],['
  text=text.replaceAll('href="README.md"','href="README.static.md"').replaceAll('href="README.en.md"','href="README.en.static.md"');
  const target=lang==='pt'?'README.md':'README.en.md';
  const label=lang==='pt'?'Ver versão com animações':'Read the animated version';
- text=text.replace(/<!-- sakura:motion -->[\s\S]*?<!-- \/sakura:motion -->/,`<!-- sakura:motion -->\n<p align="right"><a href="${target}">${label}</a></p>\n<!-- /sakura:motion -->`);
+ text=text.replace(/<!-- sakura:motion -->[\s\S]*?<!-- \/sakura:motion -->/,`<!-- sakura:motion -->\n<a href="${target}">${label}</a>\n<!-- /sakura:motion -->`);
  writeFileSync(`${root}${destination}`,text);
 }
 console.log('Generated complete PT/EN profiles without animated artwork.');

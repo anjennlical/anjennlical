@@ -1,10 +1,10 @@
 <!-- sakura:languages -->
-<p align="right"><a href="README.md"><img src="assets/profile/links/language-pt-pt.svg" width="164" height="44" alt="Ler em português brasileiro" /></a> <a href="README.en.md"><img src="assets/profile/links/language-en-pt.svg" width="144" height="44" alt="Read in English" /></a></p>
-<!-- /sakura:languages -->
-
+<p align="right"><a href="README.md"><img src="assets/profile/links/language-pt-pt-e8180acd.svg" width="149" height="44" alt="Ler em português brasileiro" /></a> <a href="README.en.md"><img src="assets/profile/links/language-en-pt-9abf3334.svg" width="135" height="44" alt="Read in English" /></a>
 <!-- sakura:motion -->
-<p align="right"><a href="README.static.md"><img src="assets/profile/links/motion-pt.svg" width="184" height="44" alt="Sem movimento" /></a></p>
+<a href="README.static.md"><img src="assets/profile/links/motion-pt-59641c15.svg" width="142" height="44" alt="Sem movimento" /></a>
 <!-- /sakura:motion -->
+</p>
+<!-- /sakura:languages -->
 
 <p align="center"><picture><source media="(max-width: 600px)" srcset="assets/profile/hero-pt-mobile.svg" /><img src="assets/profile/hero-pt.svg" width="960" alt="Sakura OS — oi, eu sou a lari! Terminal noturno em rosa e lavanda com a gatinha original Sakura Byte." /></picture></p>
 
@@ -12,17 +12,17 @@
 
 **Estudante de Tecnologia em Cibersegurança na FIAP · Desenvolvedora em formação**
 
-Crio projetos que conectam software, inteligência artificial e criatividade. Meu ponto de partida é o problema que quero resolver e a experiência que quero oferecer: uma ferramenta para investigar evidências ou um jogo para aprender segurança digital.
+Crio aplicações web, ferramentas de análise e jogos educativos que conectam software, IA e criatividade.
 
-Trabalho com React, TypeScript e Python, integração de modelos de linguagem e interfaces interativas. Defino o conceito, a direção visual e as prioridades dos projetos; uso IA como apoio à implementação e à revisão, avaliando as propostas ao longo do desenvolvimento. Aqui compartilho o que construo e aprendo nesse processo.
+Trabalho com React, TypeScript e Python. Defino o conceito, a direção visual e as prioridades dos projetos, usando IA como apoio à implementação e à revisão. Meu foco é transformar ideias em experiências funcionais, com atenção à clareza, à usabilidade e aos detalhes.
 
 <!-- sakura:navigation -->
 <p>
-<a href="#projetos-em-destaque"><img src="assets/profile/links/nav-0-pt.svg" width="114" height="44" alt="Projetos" /></a>
-<a href="#tecnologias-e-ferramentas"><img src="assets/profile/links/nav-1-pt.svg" width="140" height="44" alt="Tecnologias" /></a>
-<a href="#em-desenvolvimento"><img src="assets/profile/links/nav-2-pt.svg" width="160" height="44" alt="Em andamento" /></a>
-<a href="#atividade-pública"><img src="assets/profile/links/nav-3-pt.svg" width="124" height="44" alt="Atividade" /></a>
-<a href="#vamos-conversar"><img src="assets/profile/links/nav-4-pt.svg" width="114" height="44" alt="Contato" /></a>
+<a href="#projetos-em-destaque"><img src="assets/profile/links/nav-0-pt-2d3fa057.svg" width="106" height="44" alt="Projetos" /></a>
+<a href="#tecnologias-e-ferramentas"><img src="assets/profile/links/nav-1-pt-206965d5.svg" width="128" height="44" alt="Tecnologias" /></a>
+<a href="#em-desenvolvimento"><img src="assets/profile/links/nav-2-pt-d77e1d15.svg" width="135" height="44" alt="Em andamento" /></a>
+<a href="#atividade-pública"><img src="assets/profile/links/nav-3-pt-b7786de8.svg" width="113" height="44" alt="Atividade" /></a>
+<a href="#vamos-conversar"><img src="assets/profile/links/nav-4-pt-3fd34e17.svg" width="99" height="44" alt="Contato" /></a>
 </p>
 <!-- /sakura:navigation -->
 
@@ -30,18 +30,18 @@ Trabalho com React, TypeScript e Python, integração de modelos de linguagem e 
 
 ### 01 / NekoStrike
 
-[![NekoStrike — evidências primeiro, IA com contexto. Aplicação de segurança com MVP local.](assets/profile/projects/nekostrike-pt.svg)](https://github.com/anjennlical/nekostrike)
+[![NekoStrike — evidências primeiro, IA com contexto. Aplicação de segurança com MVP local.](assets/profile/projects/nekostrike-pt-38c94dd1.svg)](https://github.com/anjennlical/nekostrike)
 
-Uma aplicação full-stack para estudar segurança de APIs sem perder o contexto das evidências. O NekoStrike conecta testes controlados, revisão de achados e relatórios rastreáveis em um fluxo único. A Mochi AI oferece explicações opcionais a partir dos dados coletados, mantendo os resultados determinísticos separados da interpretação do modelo e sujeitos à revisão humana.
+Uma aplicação full-stack que reúne testes controlados de segurança de APIs, evidências, histórico e relatórios. A Mochi AI oferece explicações opcionais, mantendo resultados determinísticos separados da interpretação do modelo.
 
-- **Implementado:** três cenários isolados com versões vulneráveis e corrigidas, histórico em SQLite e exportação Markdown.
-- **IA:** integração com a OpenAI Responses API, saída estruturada e validação de referências; geração desligada por padrão.
+- **Recursos:** três cenários isolados, histórico em SQLite, exportação Markdown e testes automatizados.
+- **Mochi AI:** OpenAI Responses API, saída estruturada e referências validadas; desligada por padrão.
 - **Stack:** Python, FastAPI, React, TypeScript, Vite e SQLite.
 
 **Estado:** MVP local funcional, em refinamento. Sem demonstração pública hospedada.
 
 <!-- sakura:neko-actions -->
-<p><a href="https://github.com/anjennlical/nekostrike"><img src="assets/profile/links/code-pt.svg" width="140" height="44" alt="Ver código" /></a> <a href="https://github.com/anjennlical/nekostrike#architecture"><img src="assets/profile/links/architecture-pt.svg" width="150" height="44" alt="Arquitetura" /></a></p>
+<p><a href="https://github.com/anjennlical/nekostrike"><img src="assets/profile/links/code-pt-ca52ffb4.svg" width="120" height="44" alt="Ver código" /></a> <a href="https://github.com/anjennlical/nekostrike#architecture"><img src="assets/profile/links/architecture-pt-d1cf1001.svg" width="128" height="44" alt="Arquitetura" /></a></p>
 
 [Validação e limites](https://github.com/anjennlical/nekostrike/blob/main/docs/portfolio/STATUS.md)
 <!-- /sakura:neko-actions -->
@@ -61,12 +61,12 @@ O laboratório e os relatórios funcionam sem chave de API. Testes automatizados
 
 ### 02 / Cyber Kitty Adventures
 
-[![Cyber Kitty Adventures — explorar, aprender e cuidar do mundo digital. Jogo educativo, Capítulo 1.](assets/profile/projects/cyber-kitty-pt.svg)](https://github.com/anjennlical/cyber-kitty-technical-showcase)
+[![Cyber Kitty Adventures — explorar, aprender e cuidar do mundo digital. Jogo educativo, Capítulo 1.](assets/profile/projects/cyber-kitty-pt-b1163d16.svg)](https://github.com/anjennlical/cyber-kitty-technical-showcase)
 
-Um jogo educativo que apresenta segurança digital por meio da exploração, da narrativa e de decisões práticas em Byteberry Town. Desenvolvido com Phaser e TypeScript, transforma conceitos como organização de arquivos, verificação de origem e compartilhamento seguro em desafios interativos. A proposta é criar um espaço acolhedor para experimentar, errar e aprender antes de enfrentar situações reais.
+Jogo educativo em Phaser e TypeScript que apresenta segurança digital por meio de exploração, narrativa e decisões práticas em Byteberry Town. As atividades abordam arquivos, verificação de origem e compartilhamento seguro.
 
-- **No jogo:** exploração, diálogos, atividades educativas e progresso salvo no navegador, em português e inglês.
-- **Na vitrine técnica pública:** classificação de informações, cinco espaços de salvamento e retomada por checkpoints.
+- **Jogo:** atividades e progresso salvo no navegador, em português e inglês.
+- **Demo técnica separada:** classificação de informações, cinco espaços de salvamento e checkpoints.
 - **Stack do jogo:** Phaser, TypeScript e Vite. **Vitrine técnica:** TypeScript, HTML, CSS e APIs do navegador.
 
 ![Captura real do jogo Cyber Kitty Adventures: personagem explorando Byteberry Town.](assets/profile/projects/cyber-game-town.jpg)
@@ -82,21 +82,21 @@ Um jogo educativo que apresenta segurança digital por meio da exploração, da 
 
 </details>
 
-**Estado:** Capítulo 1 disponível para testes mediante contato; vitrine técnica pública disponível. Projeto de fã independente, com personagens e artes de terceiros, sem afiliação oficial com a Sanrio.
+**Estado:** Capítulo 1 disponível para testes mediante contato; demo técnica pública. Projeto de fã sem afiliação com a Sanrio; personagens e artes pertencem aos respectivos titulares.
 
 <!-- sakura:cyber-actions -->
-<p><a href="https://cyber-kitty-technical-showcase.vercel.app/"><img src="assets/profile/links/demo-pt.svg" width="204" height="44" alt="Abrir demo técnica" /></a> <a href="https://github.com/anjennlical/cyber-kitty-technical-showcase"><img src="assets/profile/links/code-pt.svg" width="140" height="44" alt="Ver código da vitrine técnica" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/playtest-pt.svg" width="184" height="44" alt="Testar o jogo" /></a></p>
+<p><a href="https://cyber-kitty-technical-showcase.vercel.app/"><img src="assets/profile/links/demo-pt-7c23ea99.svg" width="135" height="44" alt="Demo técnica" /></a> <a href="https://github.com/anjennlical/cyber-kitty-technical-showcase"><img src="assets/profile/links/code-pt-ca52ffb4.svg" width="120" height="44" alt="Ver código da vitrine técnica" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/playtest-pt-dd71b648.svg" width="128" height="44" alt="Testar jogo" /></a></p>
 
 [Conhecer o processo](https://github.com/anjennlical/cyber-kitty-technical-showcase/blob/main/docs/PROCEDENCIA.md)
 <!-- /sakura:cyber-actions -->
 
 ### 03 / Nocturne AI
 
-![Nocturne AI — investigação digital e inteligência artificial. Projeto em desenvolvimento.](assets/profile/projects/nocturne-pt.svg)
+![Nocturne AI — investigação digital e inteligência artificial. Projeto em desenvolvimento.](assets/profile/projects/nocturne-pt-eb82a9f2.svg)
 
-Projeto em desenvolvimento voltado à investigação digital com inteligência artificial. A proposta é explorar como arquiteturas multiagentes podem organizar etapas de análise, apoiar a compreensão de evidências e estruturar hipóteses investigativas. Combina experimentação com modelos de linguagem e desenho de fluxos de investigação, com a arquitetura multiagente como parte da direção planejada.
+Projeto em desenvolvimento para explorar investigação digital com IA. A proposta pesquisa fluxos de análise de evidências e hipóteses investigativas, com arquiteturas multiagentes planejadas.
 
-**Estado:** em desenvolvimento. **Direção técnica planejada:** LLMs e arquiteturas multiagentes aplicados à investigação digital. Repositório e demonstração públicos ainda não vinculados.
+**Estado:** em desenvolvimento · arquitetura multiagente planejada. Ainda sem repositório ou demo públicos vinculados.
 
 ## Tecnologias e ferramentas
 
@@ -126,7 +126,7 @@ Construo interfaces com React, TypeScript, HTML e CSS, serviços com Python e Fa
 <img src="assets/profile/toolkit/gemini-color.svg" width="142" alt="Gemini" />
 </p>
 
-ChatGPT, Claude, Codex e Gemini fazem parte do meu fluxo de trabalho para prototipar, elaborar prompts, investigar problemas e revisar soluções. No NekoStrike, a IA também é uma funcionalidade do produto: integração com modelos de linguagem, respostas estruturadas e validação de referências às evidências.
+ChatGPT, Claude, Codex e Gemini apoiam prototipação e revisão. No NekoStrike, integro LLMs com respostas estruturadas e validação de evidências.
 
 ### Cibersegurança
 
@@ -153,7 +153,7 @@ O laboratório NekoStrike demonstra meu trabalho com evidências e segurança de
 
 **Git · GitHub · VS Code · PowerShell · AWS · Power BI · n8n · Make**
 
-Git e GitHub organizam o código e seu histórico; PowerShell apoia os fluxos locais no Windows. Uso n8n e Make para automação de fluxos. VS Code, AWS e Power BI fazem parte dos meus conhecimentos adicionais.
+Git/GitHub para versionamento, PowerShell no Windows e n8n/Make para automação. VS Code, AWS e Power BI completam minhas ferramentas.
 
 <details>
 <summary>Contexto de uso e níveis de experiência</summary>
@@ -166,6 +166,9 @@ As tecnologias dos projetos estão descritas nos repositórios. Java, AWS, Power
 
 ## Em desenvolvimento
 
+<details>
+<summary>O que estou refinando agora</summary>
+
 ```text
 lari@sakura-os:~ / projetos
 ├── NekoStrike      → refinamento do MVP local
@@ -174,6 +177,8 @@ lari@sakura-os:~ / projetos
 ```
 
 Investigo como tornar evidências compreensíveis, experiências educativas mais interativas e fluxos de análise mais úteis.
+
+</details>
 
 ## Atividade pública
 
@@ -184,7 +189,7 @@ Veja o [histórico de contribuições](https://github.com/anjennlical) e os [rep
 Para conversar sobre software, IA, cibersegurança ou testes do Cyber Kitty:
 
 <!-- sakura:contact-actions -->
-<p><a href="https://www.linkedin.com/in/larissa-albuquerque-65b437241/"><img src="assets/profile/links/linkedin-pt.svg" width="132" height="44" alt="LinkedIn" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/email-pt.svg" width="152" height="44" alt="Enviar e-mail" /></a> <a href="https://github.com/anjennlical"><img src="assets/profile/links/github-pt.svg" width="124" height="44" alt="GitHub" /></a></p>
+<p><a href="https://www.linkedin.com/in/larissa-albuquerque-65b437241/"><img src="assets/profile/links/linkedin-pt-9b4ed985.svg" width="106" height="44" alt="LinkedIn" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/email-pt-37909619.svg" width="142" height="44" alt="Enviar e-mail" /></a> <a href="https://github.com/anjennlical"><img src="assets/profile/links/github-pt-5af645a8.svg" width="92" height="44" alt="GitHub" /></a></p>
 
 `kerlalarissa@gmail.com` · `@anjennlical`
 <!-- /sakura:contact-actions -->
