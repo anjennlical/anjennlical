@@ -21,7 +21,7 @@ for(const {name,text} of texts){
  for(const m of text.matchAll(/<img\b[^>]*>/g)) assert(/alt="[^"]+"/.test(m[0]),`${name}: missing alt text`);
  assert(!/<script|<style|<iframe|onclick=/.test(text),`${name}: unsupported executable markup`);
  assert(/href="README.md"/.test(text)&&/href="README.en.md"/.test(text),`${name}: missing language switch`);
- const intro=text.split('**\n\n')[1].split('\n\n[')[0];
+ const intro=text.split('**\n\n')[1].split(/\n\n(?:\[|<!-- sakura:navigation -->)/)[0];
  const introWords=words(intro); assert(introWords>=60&&introWords<=100,`${name}: introduction is ${introWords} words`);
  const descriptions=[...text.matchAll(/^### 0\d \/ (.+)\n\n.*\n\n([^\n]+)/gm)].map(m=>({project:m[1],words:words(m[2])}));
  assert.equal(descriptions.length,3,`${name}: missing project`);

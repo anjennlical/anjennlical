@@ -1,4 +1,6 @@
-<p align="right"><a href="README.md">🇧🇷 Português</a> | <a href="README.en.md">🌐 English</a></p>
+<!-- sakura:languages -->
+<p align="right"><a href="README.md"><img src="assets/profile/links/language-pt-en.svg" width="164" height="44" alt="Ler em português brasileiro" /></a> <a href="README.en.md"><img src="assets/profile/links/language-en-en.svg" width="144" height="44" alt="Read in English" /></a></p>
+<!-- /sakura:languages -->
 
 <p align="center"><picture><source media="(max-width: 600px)" srcset="assets/profile/hero-en-mobile.svg" /><img src="assets/profile/hero-en.svg" width="960" alt="Sakura OS — hello, I'm lari! A midnight terminal in pink and lavender with original pixel cat Sakura Byte." /></picture></p>
 
@@ -10,7 +12,15 @@ I build projects that connect software, artificial intelligence and creativity. 
 
 My practical work involves React, TypeScript and Python, language model integrations and interactive interfaces. I'm interested in digital product engineering and user experience: understanding a problem, building a solution and refining its details. Here I share the projects, experiments and lessons that come out of that process.
 
-[Projects](#featured-projects) · [Technologies](#technologies-and-tools) · [In development](#in-development) · [Activity](#public-activity) · [Contact](#lets-connect)
+<!-- sakura:navigation -->
+<p>
+<a href="#featured-projects"><img src="assets/profile/links/nav-0-en.svg" width="118" height="44" alt="Projects" /></a>
+<a href="#technologies-and-tools"><img src="assets/profile/links/nav-1-en.svg" width="150" height="44" alt="Technologies" /></a>
+<a href="#in-development"><img src="assets/profile/links/nav-2-en.svg" width="140" height="44" alt="In progress" /></a>
+<a href="#public-activity"><img src="assets/profile/links/nav-3-en.svg" width="112" height="44" alt="Activity" /></a>
+<a href="#lets-connect"><img src="assets/profile/links/nav-4-en.svg" width="116" height="44" alt="Contact" /></a>
+</p>
+<!-- /sakura:navigation -->
 
 ## Featured projects
 
@@ -26,7 +36,11 @@ A full-stack application for studying API security while keeping evidence in con
 
 **Status:** functional local MVP undergoing refinement. No publicly hosted demo.
 
-[Repository](https://github.com/anjennlical/nekostrike) · [Architecture](https://github.com/anjennlical/nekostrike#architecture) · [Validation & limitations](https://github.com/anjennlical/nekostrike/blob/main/docs/portfolio/STATUS.md)
+<!-- sakura:neko-actions -->
+<p><a href="https://github.com/anjennlical/nekostrike"><img src="assets/profile/links/code-en.svg" width="140" height="44" alt="Source code" /></a> <a href="https://github.com/anjennlical/nekostrike#architecture"><img src="assets/profile/links/architecture-en.svg" width="150" height="44" alt="Architecture" /></a></p>
+
+[Validation & limitations](https://github.com/anjennlical/nekostrike/blob/main/docs/portfolio/STATUS.md)
+<!-- /sakura:neko-actions -->
 
 <details>
 <summary>See Mochi AI and the engineering details</summary>
@@ -66,7 +80,11 @@ An educational game that introduces digital safety through exploration, storytel
 
 **Status:** Chapter 1 playtesting available by contacting me; public technical showcase available. An independent fan project with third-party characters and artwork, with no official Sanrio affiliation.
 
-[Showcase repository](https://github.com/anjennlical/cyber-kitty-technical-showcase) · [Try the technical demo](https://cyber-kitty-technical-showcase.vercel.app/) · [Project provenance](https://github.com/anjennlical/cyber-kitty-technical-showcase/blob/main/docs/PROCEDENCIA.md) · [Request game playtesting](mailto:kerlalarissa@gmail.com)
+<!-- sakura:cyber-actions -->
+<p><a href="https://cyber-kitty-technical-showcase.vercel.app/"><img src="assets/profile/links/demo-en.svg" width="204" height="44" alt="Open technical demo" /></a> <a href="https://github.com/anjennlical/cyber-kitty-technical-showcase"><img src="assets/profile/links/code-en.svg" width="140" height="44" alt="View technical showcase code" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/playtest-en.svg" width="184" height="44" alt="Game playtesting" /></a></p>
+
+[Project provenance](https://github.com/anjennlical/cyber-kitty-technical-showcase/blob/main/docs/PROCEDENCIA.md)
+<!-- /sakura:cyber-actions -->
 
 ### 03 / Nocturne AI
 
@@ -161,7 +179,11 @@ Browse my [contribution history](https://github.com/anjennlical) and [public rep
 
 For conversations about software, AI, cybersecurity or Cyber Kitty playtesting:
 
-[LinkedIn](https://www.linkedin.com/in/larissa-albuquerque-65b437241/) · [Email · kerlalarissa@gmail.com](mailto:kerlalarissa@gmail.com) · [GitHub · @anjennlical](https://github.com/anjennlical)
+<!-- sakura:contact-actions -->
+<p><a href="https://www.linkedin.com/in/larissa-albuquerque-65b437241/"><img src="assets/profile/links/linkedin-en.svg" width="132" height="44" alt="LinkedIn" /></a> <a href="mailto:kerlalarissa@gmail.com"><img src="assets/profile/links/email-en.svg" width="152" height="44" alt="Send email" /></a> <a href="https://github.com/anjennlical"><img src="assets/profile/links/github-en.svg" width="124" height="44" alt="GitHub" /></a></p>
+
+`kerlalarissa@gmail.com` · `@anjennlical`
+<!-- /sakura:contact-actions -->
 
 <p align="center"><img src="assets/profile/footer-en.svg" width="960" alt="Keep a little pink in the source code. Made with curiosity, code and a little bit of pink, with Sakura Byte under the stars." /></p>
 

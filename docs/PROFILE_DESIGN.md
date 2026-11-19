@@ -20,13 +20,19 @@ Os assets originais da primeira versão continuam preservados. Sakura Byte é um
 
 1. Edite ambos os READMEs ao mudar informações de um projeto. Preserve o mesmo escopo, stack, estado e links em cada idioma.
 2. Edite `scripts/refine-assets.mjs` para alterar os elementos localizados. Ele reutiliza as formas e animações de `scripts/build-assets.mjs`, sem bibliotecas externas ou rede.
-3. Execute `node scripts/refine-assets.mjs` e `node scripts/validate.mjs`.
+3. Execute `node scripts/pink-links.mjs` e `node scripts/validate.mjs`. O primeiro comando também executa os geradores anteriores e atualiza os blocos de navegação marcados nos dois READMEs.
 4. Confira os SVGs como XML e as prévias em desktop e mobile. Se alterar ícones, preserve suas fontes e licenças.
 5. Confira o diff antes de qualquer publicação. Uma revisão local não é aprovação para push.
 
 Nomes e informações essenciais permanecem em Markdown copiável. Ícones têm alt text, e os SVGs autorais possuem título e descrição. Cada imagem contém seu próprio fundo e contraste; o conteúdo do README acompanha o tema do GitHub. A grade usa imagens inline de largura consistente que quebram de linha naturalmente, sem tabela larga ou CSS externo.
 
 As animações usam CSS interno ao SVG: estrelas, cauda, cursor e revelação do texto. Nenhuma animação nova foi acrescentada na v2. `prefers-reduced-motion` desativa as regras onde o visualizador oferece suporte; links estáticos fornecem uma alternativa explícita. Todas as informações continuam visíveis quando a animação não é suportada.
+
+## Navegação rosa
+
+Os links de navegação, idioma, ações de projetos e contato usam imagens SVG locais dentro de links HTML normais, com rótulos alternativos. As imagens são estáticas, com altura de 44 px, contraste alto e quebra natural de linha. O preenchimento rosa claro destaca ações principais; ações secundárias usam fundo escuro e borda rosa. Hero, cards e contornos receberam mais rosa sem alterar as capturas dos projetos ou os logotipos.
+
+A cor dos links de texto nativos continua sob controle do tema do GitHub. Não há CSS tentando alterar o estilo da plataforma: [o pipeline oficial remove estilos inline](https://github.com/github/markup#github-markup). Referências técnicas permanecem links de texto para evitar excesso de botões. Endereço de e-mail e identificador continuam copiáveis fora das imagens.
 
 ## Conteúdo e evidências
 
