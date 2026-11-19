@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" width="960" height="420" role="img" aria-labelledby="title desc"><title id="title">Sakura OS — hello, i'm lari!</title><desc id="desc">Sakura OS terminal with gentle stars and original pixel cat Sakura Byte.</desc><defs><linearGradient id="night" x2="1" y2="1"><stop stop-color="#25152E"/><stop offset=".55" stop-color="#110E19"/><stop offset="1" stop-color="#211B36"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#B89CFF" stroke-opacity=".055"/></pattern></defs><g font-family="Segoe UI, Arial, sans-serif" fill="#F9F4FF"><rect x="1" y="1" width="958" height="418" rx="22" fill="url(#night)" stroke="#624365"/><rect x="1" y="1" width="958" height="418" rx="22" fill="url(#grid)"/>
+ <path d="M0 90Q90 80 176 0M35 65 25 0M95 37 145 48" fill="none" stroke="#744263" stroke-width="4"/><g transform="translate(36 58) scale(0.65)" fill="#FFB5DA"><ellipse rx="7" ry="12" cy="-10" transform="rotate(0)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(72)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(144)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(216)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(288)"/><circle r="4" fill="#FF5CA8"/></g><g transform="translate(101 32) scale(0.8)" fill="#FFB5DA"><ellipse rx="7" ry="12" cy="-10" transform="rotate(0)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(72)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(144)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(216)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(288)"/><circle r="4" fill="#FF5CA8"/></g><g transform="translate(155 8) scale(0.65)" fill="#FFB5DA"><ellipse rx="7" ry="12" cy="-10" transform="rotate(0)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(72)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(144)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(216)"/><ellipse rx="7" ry="12" cy="-10" transform="rotate(288)"/><circle r="4" fill="#FF5CA8"/></g>
+ <path d="M28 58H932" stroke="#624365"/><circle cx="40" cy="30" r="5" fill="#FF5CA8"/><circle cx="60" cy="30" r="5" fill="#B89CFF"/><circle cx="80" cy="30" r="5" fill="#7DE0E8"/>
+ <text x="480" y="35" text-anchor="middle" fill="#C2B6CF" font-family="monospace" font-size="12" letter-spacing="1.6">SAKURA OS / DEVELOPER PORTFOLIO</text>
+ <text x="44" y="106" fill="#FF5CA8" font-family="monospace" font-size="12" letter-spacing="2.5">MIDNIGHT SAKURA // DIGITAL PLAYGROUND</text>
+ <text x="40" y="161" font-size="52" font-weight="700" letter-spacing="-1.5">hello, i'm lari! <tspan fill="#FFB5DA">♡</tspan></text>
+ <text x="44" y="197" font-size="17" fill="#C2B6CF">Larissa Albuquerque · creative developer in progress</text>
+ <text x="44" y="242" font-size="22" fill="#FFB5DA">building cute things with serious code.</text>
+ <text x="44" y="275" font-size="18">Software, AI &amp; interactive experiences.</text>
+ <rect x="44" y="300" width="540" height="78" rx="12" fill="#1C1628" stroke="#493552"/>
+ <text x="64" y="325" font-family="monospace" fill="#B89CFF" font-size="13">lari@sakura-os:~</text>
+ <text x="64" y="355" font-family="monospace" fill="#7DE0E8" font-size="16">❯ <tspan class="typed">curiosity.exe is always running</tspan></text><path class="cursor" d="M420 341v19" stroke="#FF5CA8" stroke-width="7"/>
+ <circle cx="769" cy="240" r="112" fill="#B89CFF" opacity=".04"/><circle cx="769" cy="240" r="96" fill="none" stroke="#80557F" stroke-dasharray="3 12"/>
+ <g transform="translate(670 137) scale(1.45)"><g shape-rendering="crispEdges">
+ <g class="tail"><path d="M95 112h25V85h-10V73h12v8h10v39h-37z" fill="#B89CFF"/><path d="M120 85h12v16h-12z" fill="#FF5CA8"/></g>
+ <path d="M28 50V18h13v10h13v12h28V28h13V18h13v59H96v12h10v39H28V89H16V50z" fill="#352746"/>
+ <path d="M28 50h80v27H96v12H40V77H28zM40 89h54v27H40z" fill="#F9F4FF"/>
+ <path d="M28 50V30h13v20M95 50V30h13v20" fill="#FFB5DA"/>
+ <path d="M42 58h9v13h-9M80 58h9v13h-9" fill="#110E19"/>
+ <path d="M42 58h4v4h-4M80 58h4v4h-4" fill="#7DE0E8"/>
+ <path d="M59 72h13v5H59M64 77h5v5h-5" fill="#CB3D81"/>
+ <path d="M31 72h12v5H31M88 72h12v5H88M40 116h17v12H40M77 116h17v12H77" fill="#FFB5DA"/>
+ <path d="M83 33V20l13 6 13-6v13l-13-5z" fill="#FF5CA8"/><path d="M93 23h6v8h-6" fill="#7DE0E8"/>
+ <path d="M48 97h38v21H48z" fill="#352746"/><path d="M54 101l5 5-5 5m12 0h10" fill="none" stroke="#7DE0E8" stroke-width="3"/>
+</g></g><path class="star" transform="translate(656 130) scale(0.7)" d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#FFB5DA"/><path class="star" transform="translate(885 204) scale(0.7)" d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#FFB5DA"/><path class="star" transform="translate(854 112) scale(1)" d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#FFB5DA"/><path class="star" transform="translate(650 301) scale(0.5)" d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#FFB5DA"/><path class="star" transform="translate(900 319) scale(0.6)" d="M0-8 2-2 8 0 2 2 0 8-2 2-8 0-2-2Z" fill="#FFB5DA"/>
+ <text x="769" y="361" text-anchor="middle" font-family="monospace" font-size="11" fill="#B89CFF" letter-spacing="1.6">COMPANION / SAKURA BYTE</text>
+ <text x="44" y="402" font-family="monospace" font-size="11" fill="#C2B6CF">SOFTWARE DEVELOPMENT · AI · CYBERSECURITY</text><text x="915" y="402" fill="#FFB5DA" text-anchor="end">✦</text></g></svg>

@@ -1,33 +1,35 @@
 # Midnight Sakura // Digital Playground
 
-Profile artwork and copy for **Larissa Albuquerque / @anjennlical**. Prepared on 18 November 2026; the owner approved publication with real game captures replacing the public-demo screenshot.
+Sistema visual do perfil de Larissa Albuquerque / @anjennlical. A primeira versão foi publicada em 18/11/2026. A revisão bilíngue v2, incluindo n8n e Make, foi aprovada pela autora para publicação. Veja [decisões da v2](V2_REVIEW.md) e [verificação](V2_VERIFICATION.md).
 
-## Design and maintenance
+## Estrutura
 
-The original profile's greeting, personal tone, pink/sakura/night palette and “building cute things with serious code” are preserved. Sakura OS adds a terminal composition and **Sakura Byte**, an original pixel cat with a circuit bow and a terminal on its chest. The earlier illustrated banner remains in Git history. No third-party character is used in the new profile artwork.
+- `README.md`: português brasileiro, idioma principal.
+- `README.en.md`: versão completa em inglês, com o mesmo conteúdo essencial.
+- `assets/profile/hero-{pt,en}.svg`: abertura de desktop, com animação suave.
+- `assets/profile/hero-{pt,en}-mobile.svg`: composição própria para telas de até 600 px, escolhida por `picture`/`source` compatíveis com Markdown do GitHub.
+- `assets/profile/footer-{pt,en}.svg`: assinatura localizada com o mesmo mascote.
+- `*-static.svg`: alternativas sem animação. Hero e rodapé estáticos continuam vinculados no README.
+- `assets/profile/projects/`: cabeçalhos locais e capturas reais aprovadas.
+- `assets/profile/toolkit/`: cartões de ícones locais, compartilhados entre os idiomas.
+- `assets/profile/icons/`: fontes dos ícones, revisões e licenças; [créditos](ICONS.md).
 
-Assets live in `assets/profile/`. Run `node scripts/build-assets.mjs` from the repository root to regenerate the SVGs. The generator uses only Node built-ins. Edit the artwork there rather than editing its output. Colors: background `#110E19`, surface `#1C1628`, pink `#FF5CA8`, soft pink `#FFB5DA`, lavender `#B89CFF`, cyan `#7DE0E8`, white `#F9F4FF`. Each SVG owns its background and contrast, so the artwork works on light or dark GitHub pages.
+Os assets originais da primeira versão continuam preservados. Sakura Byte é um mascote pixelado original com laço tecnológico e pequeno terminal. Os personagens que aparecem nas capturas do jogo são separados desse mascote e mantêm a atribuição do projeto de fã.
 
-The hero, mascot and footer each have an animated SVG and a static SVG. Project headings are static. Animation uses internal SVG CSS: slow star opacity, tail rotation, cursor opacity and a clipped terminal message. There is no JavaScript, external stylesheet, external font, remote image dependency or `foreignObject`. `prefers-reduced-motion` disables the animations where the viewer supports it; static versions are also linked in the README. With animation unsupported, the complete message remains visible. Motion preference propagation through GitHub's image proxy must be checked on the published draft; the links provide explicit static alternatives.
+## Atualizar
 
-All essential identity, stack, project status and contact information is readable Markdown outside images. Images have alt text and SVGs have titles/descriptions. Project sections flow in one column, with no fixed-width HTML table of cards. The toolkit is a two-column text table. Banners scale using their `viewBox` and `width` attributes. Decorative text can become small on mobile; the adjacent Markdown supplies the readable information.
+1. Edite ambos os READMEs ao mudar informações de um projeto. Preserve o mesmo escopo, stack, estado e links em cada idioma.
+2. Edite `scripts/refine-assets.mjs` para alterar os elementos localizados. Ele reutiliza as formas e animações de `scripts/build-assets.mjs`, sem bibliotecas externas ou rede.
+3. Execute `node scripts/refine-assets.mjs` e `node scripts/validate.mjs`.
+4. Confira os SVGs como XML e as prévias em desktop e mobile. Se alterar ícones, preserve suas fontes e licenças.
+5. Confira o diff antes de qualquer publicação. Uma revisão local não é aprovação para push.
 
-## Updating projects
+Nomes e informações essenciais permanecem em Markdown copiável. Ícones têm alt text, e os SVGs autorais possuem título e descrição. Cada imagem contém seu próprio fundo e contraste; o conteúdo do README acompanha o tema do GitHub. A grade usa imagens inline de largura consistente que quebram de linha naturalmente, sem tabela larga ou CSS externo.
 
-1. Read the current public project README and relevant implementation before updating claims.
-2. Keep the distinction between a public demo, local application, full game and planned work.
-3. Use real screenshots from public repositories or captures explicitly approved by the owner; preserve historical/simulated labels. Do not replace them with generated application screens.
-4. Update statuses and links in the README. Avoid embedding metrics likely to go stale.
-5. Re-run the local validator and visually inspect SVGs, light/dark layouts and a narrow viewport.
+As animações usam CSS interno ao SVG: estrelas, cauda, cursor e revelação do texto. Nenhuma animação nova foi acrescentada na v2. `prefers-reduced-motion` desativa as regras onde o visualizador oferece suporte; links estáticos fornecem uma alternativa explícita. Todas as informações continuam visíveis quando a animação não é suportada.
 
-NekoStrike's unchanged Mochi Studio capture is dated 13 November 2026, before RC26.1 spacing changes, with a simulated provider. At the owner's explicit request, Cyber Kitty uses two actual full-game captures: Byteberry Town and the interactive Cyber HQ workstation. Their PNG sources were converted to JPEG for size, without compositing or invented gameplay. The demo screenshot was removed. Captions distinguish the game images from the separately linked public technical demo. The game's fan-project status and third-party artwork attribution remain explicit.
+## Conteúdo e evidências
 
-## Activity and dependencies
+NekoStrike possui MVP local e integração opcional com OpenAI Responses API; a captura da Mochi AI usa um provedor simulado e mantém sua identificação histórica. Cyber Kitty usa somente capturas reais do jogo completo; os links para código e demo técnica são identificados como uma experiência separada. Nocturne AI é descrito, conforme confirmação da autora, como projeto em desenvolvimento e arquitetura multiagente planejada.
 
-This version links to GitHub's own contribution calendar and repository history. It does not add a statistics service or a scheduled workflow. A moving cat over an invented grid would imply contributions that were never fetched. A real animated calendar would need a separately maintained data-generation pipeline and GitHub rendering verification; it is deliberately deferred. There are no tokens, Actions permissions or new GitHub settings to configure.
-
-## Review before publication
-
-Implementation branch: `codex/midnight-sakura-profile`. The owner reviewed the initial draft, approved publication and requested only real game screenshots in place of the demo screenshot. Validate locally, commit on this branch, inspect the remote branch README, then fast-forward the profile's main branch without rewriting history. GitHub settings do not need to change.
-
-The local preview approximates GitHub styling; it is not proof of GitHub's final rendering. Keep essential content outside images even after publication.
+Competências complementares e níveis confirmados pela autora são autoavaliações. A stack demonstrada por código permanece ligada aos repositórios correspondentes. Não há números inventados, serviços de estatísticas, tokens, GitHub Actions ou novas configurações de conta.

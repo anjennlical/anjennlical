@@ -32,6 +32,7 @@ const motion = `<style>
  </style>`;
 const wrap = (w,h,title,desc,body,animated=true) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-labelledby="title desc"><title id="title">${title}</title><desc id="desc">${desc}</desc>${defs}${animated?motion:''}<g font-family="Segoe UI, Arial, sans-serif" fill="${colors.white}">${body}</g></svg>\n`;
 const save = (name,w,h,title,desc,body) => {writeFileSync(`${root}/${name}.svg`,wrap(w,h,title,desc,body));writeFileSync(`${root}/${name}-static.svg`,wrap(w,h,title,desc,body,false));};
+export { cat, star, blossom, wrap, save };
 const hero = `<rect x="1" y="1" width="958" height="498" rx="22" fill="url(#night)" stroke="#624365"/>
  <rect x="1" y="1" width="958" height="498" rx="22" fill="url(#grid)"/>
  <path d="M0 90Q90 80 176 0M35 65 25 0M95 37 145 48" fill="none" stroke="#744263" stroke-width="4"/>

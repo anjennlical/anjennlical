@@ -1,0 +1,25 @@
+{
+  "variant": "original; linux uses plain for size",
+  "icons": [
+    "python",
+    "typescript",
+    "javascript",
+    "java",
+    "react",
+    "html5",
+    "css3",
+    "fastapi",
+    "vitejs",
+    "sqlite",
+    "git",
+    "github",
+    "powershell",
+    "linux",
+    "claude",
+    "vscode",
+    "amazonwebservices"
+  ],
+  "revision": "32fe1d3b3f36ad11f90ab94f7db59738139c2bf6",
+  "source": "https://github.com/devicons/devicon",
+  "license": "MIT"
+}
