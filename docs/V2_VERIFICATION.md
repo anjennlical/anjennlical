@@ -31,7 +31,7 @@ Foi usado o navegador integrado, sem iniciar processos Chrome, Edge ou Chromium 
 
 ## Limites
 
-O HTML é renderizado pela API do GitHub, mas a página de prévia usa estilos locais aproximados. **A nova versão não foi enviada a uma branch remota**, conforme o pedido de aprovação antes de publicar. A renderização final do perfil e o proxy de imagens do GitHub ainda precisam de conferência após um push autorizado.
+O HTML é renderizado pela API do GitHub, mas a página de prévia usa estilos locais aproximados. Após a aprovação explícita, a revisão foi publicada na main preservando o histórico. O perfil real em português e o link English foram conferidos no navegador: o cabeçalho em inglês carregou, e n8n e Make apareceram corretamente na seção de ferramentas. A captura do perfil publicado foi salva entre os artefatos locais de revisão.
 
 Não foram feitos testes em aparelhos físicos, leitor de tela ou medição de desempenho das animações. A preferência de movimento reduzido foi preservada nos SVGs, mas sua propagação pelo proxy do GitHub não foi certificada. Há links estáticos explícitos como alternativa.
 
