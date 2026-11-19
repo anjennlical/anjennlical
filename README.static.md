@@ -30,7 +30,7 @@ Trabalho com React, TypeScript e Python. Defino o conceito, a direção visual e
 
 ### 01 / NekoStrike
 
-[![NekoStrike — evidências primeiro, IA com contexto. Aplicação de segurança com MVP local.](assets/profile/projects/nekostrike-pt-38c94dd1-static.svg)](https://github.com/anjennlical/nekostrike)
+[![NekoStrike — evidências primeiro, IA com contexto. Aplicação de segurança com MVP local.](assets/profile/projects/nekostrike-pt-d1095ba3-static.svg)](https://github.com/anjennlical/nekostrike)
 
 Uma aplicação full-stack que reúne testes controlados de segurança de APIs, evidências, histórico e relatórios. A Mochi AI oferece explicações opcionais, mantendo resultados determinísticos separados da interpretação do modelo.
 

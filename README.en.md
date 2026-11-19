@@ -30,7 +30,7 @@ I work with React, TypeScript and Python. I define each project's concept, visua
 
 ### 01 / NekoStrike
 
-[![NekoStrike — evidence first, AI with context. Security application with a local MVP.](assets/profile/projects/nekostrike-en-a9aa1e1a.svg)](https://github.com/anjennlical/nekostrike)
+[![NekoStrike — evidence first, AI with context. Security application with a local MVP.](assets/profile/projects/nekostrike-en-973c012b.svg)](https://github.com/anjennlical/nekostrike)
 
 A full-stack application bringing together controlled API security checks, evidence, history and reports. Mochi AI offers optional explanations while keeping deterministic results separate from the model's interpretation.
 
