@@ -1,6 +1,10 @@
 # Midnight Sakura // Digital Playground
 
-Sistema visual do perfil de Larissa Albuquerque / @anjennlical. A primeira versão foi publicada em 18/11/2026. A revisão bilíngue v2, incluindo n8n e Make, foi aprovada pela autora para publicação. Veja [decisões da v2](V2_REVIEW.md) e [verificação](V2_VERIFICATION.md).
+Sistema visual do portfólio de Larissa Albuquerque / @anjennlical: conteúdo em português e inglês, identidade Midnight Sakura, mascote original e navegação acessível. Veja [decisões de design](V2_REVIEW.md) e [verificação técnica](V2_VERIFICATION.md).
+
+## Autoria e processo
+
+Larissa define o conceito, a direção visual e as prioridades dos projetos, avalia propostas e acompanha sua evolução. Ferramentas de IA apoiam a prototipação, a implementação e a revisão. O perfil apresenta esse processo de forma explícita, sem atribuir todas as decisões à ferramenta nem afirmar que o código foi escrito integralmente à mão.
 
 ## Estrutura
 

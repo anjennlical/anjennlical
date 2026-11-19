@@ -12,9 +12,9 @@
 
 **Cybersecurity technology student at FIAP, Brazil · Developer in training**
 
-I build projects that connect software, artificial intelligence and creativity. I enjoy turning ideas into working experiences, from web applications and analysis tools to games that help people learn digital safety.
+I create projects that connect software, artificial intelligence and creativity. I start with the problem I want to solve and the experience I want to offer: a tool for investigating evidence or a game for learning digital safety.
 
-My practical work involves React, TypeScript and Python, language model integrations and interactive interfaces. I'm interested in digital product engineering and user experience: understanding a problem, building a solution and refining its details. Here I share the projects, experiments and lessons that come out of that process.
+I work with React, TypeScript and Python, language model integrations and interactive interfaces. I define each project's concept, visual direction and priorities, using AI to support implementation and review while evaluating its suggestions throughout development. Here I share what I build and learn along the way.
 
 <!-- sakura:navigation -->
 <p>
@@ -126,7 +126,7 @@ I build interfaces with React, TypeScript, HTML and CSS, services with Python an
 <img src="assets/profile/toolkit/gemini-color.svg" width="142" alt="Gemini" />
 </p>
 
-I use ChatGPT, Claude, Codex and Gemini to support development, prompt design and problem analysis. In NekoStrike, I work with LLM integration, structured responses and evidence validation. I define the concepts, visual direction and priorities of my projects, and review the results.
+ChatGPT, Claude, Codex and Gemini support my workflow for prototyping, prompt design, problem investigation and solution review. In NekoStrike, AI is also a product feature: language model integration, structured responses and validation of references against the evidence.
 
 ### Cybersecurity
 

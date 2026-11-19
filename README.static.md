@@ -12,9 +12,9 @@
 
 **Estudante de Tecnologia em Cibersegurança na FIAP · Desenvolvedora em formação**
 
-Desenvolvo projetos que conectam software, inteligência artificial e criatividade. Gosto de transformar ideias em experiências funcionais: de aplicações web e ferramentas de análise a jogos que ajudam a aprender segurança digital.
+Crio projetos que conectam software, inteligência artificial e criatividade. Meu ponto de partida é o problema que quero resolver e a experiência que quero oferecer: uma ferramenta para investigar evidências ou um jogo para aprender segurança digital.
 
-Meu trabalho prático passa por React, TypeScript e Python, integração de modelos de linguagem e interfaces interativas. Tenho interesse em engenharia de produtos digitais e experiência do usuário: entender um problema, construir uma solução e refinar seus detalhes. Aqui compartilho meus projetos, experimentos e aprendizados ao longo desse processo.
+Trabalho com React, TypeScript e Python, integração de modelos de linguagem e interfaces interativas. Defino o conceito, a direção visual e as prioridades dos projetos; uso IA como apoio à implementação e à revisão, avaliando as propostas ao longo do desenvolvimento. Aqui compartilho o que construo e aprendo nesse processo.
 
 <!-- sakura:navigation -->
 <p>
@@ -126,7 +126,7 @@ Construo interfaces com React, TypeScript, HTML e CSS, serviços com Python e Fa
 <img src="assets/profile/toolkit/gemini-color.svg" width="142" alt="Gemini" />
 </p>
 
-Uso ChatGPT, Claude, Codex e Gemini como apoio ao desenvolvimento, à elaboração de prompts e à análise de problemas. No NekoStrike, trabalho com integração de LLMs, respostas estruturadas e validação de evidências. Defino o conceito, a direção visual e as prioridades dos projetos, revisando os resultados.
+ChatGPT, Claude, Codex e Gemini fazem parte do meu fluxo de trabalho para prototipar, elaborar prompts, investigar problemas e revisar soluções. No NekoStrike, a IA também é uma funcionalidade do produto: integração com modelos de linguagem, respostas estruturadas e validação de referências às evidências.
 
 ### Cibersegurança
 
